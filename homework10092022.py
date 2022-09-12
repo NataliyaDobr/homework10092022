@@ -20,12 +20,27 @@
 
 # 3. Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
 # Пример: - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
-fract_part = []
-some_list = [float(input('Введите числа ')) for _ in range(int(input('введите число ')))]
-print(some_list)
-for i in range(len(some_list)):
-    fract_part.append(some_list[i]-int(some_list[i]))
-print(fract_part)
-print(max(fract_part)-min(fract_part))
+# fract_part = []
+# some_list = [float(input('Введите числа ')) for _ in range(int(input('введите число ')))]
+# print(some_list)
+# for i in range(len(some_list)):
+#     fract_part.append(some_list[i]-int(some_list[i]))
+# print(fract_part)
+# print(max(fract_part)-min(fract_part))
+
+# 4. Напишите программу, которая будет преобразовывать десятичное число в двоичное. Пример:
+# - 45 -> 101101
+# - 3 -> 11
+# - 2 -> 10
+new_digit=[]
+digit = int(input('Введите число '))
+while digit > 1:
+    rem = digit%2
+    #print(rem)
+    new_digit.append(rem)
+    digit = digit//2
+new_digit.append(digit)
+print(" ".join(map(str, new_digit[::-1])))
+
 
 
